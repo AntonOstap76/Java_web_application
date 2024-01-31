@@ -59,7 +59,19 @@ public class WebSecurityConfig {
                 .requestMatchers("/users/**").hasAuthority("Admin")
                 .requestMatchers("/categories/**").hasAnyAuthority("Admin", "Editor")
                 .requestMatchers("/brands/**").hasAnyAuthority("Admin", "Editor")
-                .requestMatchers("/products/**").hasAnyAuthority("Admin", "Editor","Salesperson", "Shipper")
+
+                //change authorisation of every products URLS
+                .requestMatchers("/products/new", "/products/delete/**")
+                            .hasAnyAuthority("Admin", "Editor")
+
+                .requestMatchers("/products/edit/**", "/products/save", "/products/check_unique")
+                            .hasAnyAuthority("Admin", "Editor", "Salesperson")
+
+                .requestMatchers("/products", "/products/", "/products/detail/**", "/products/page/**")
+                            .hasAnyAuthority("Admin", "Editor", "Salesperson", "Shipper")
+
+                .requestMatchers("/products/**").hasAnyAuthority("Admin", "Editor")
+
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()

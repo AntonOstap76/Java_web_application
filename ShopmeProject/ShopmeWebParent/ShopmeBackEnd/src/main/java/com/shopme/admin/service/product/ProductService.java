@@ -44,6 +44,17 @@ public class ProductService {
         return productRepository.save(product);
     }
 
+    // for saving only changes of prices for salesperson
+    public void saveProductPrice(Product productInForm){
+        Product productInDB = productRepository.findById(productInForm.getId()).get();
+        productInDB.setCost(productInForm.getCost());
+        productInDB.setPrice(productInForm.getPrice());
+        productInDB.setDiscountPercent(productInForm.getDiscountPercent());
+
+        productRepository.save(productInDB);
+
+    }
+
     public Page<Product> listByPage(int pageNum, String sortField, String sortDir, String keyword, Integer categoryId) {
         Sort sort = Sort.by(sortField);
 

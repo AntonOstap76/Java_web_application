@@ -2,6 +2,7 @@ package com.shopme.admin.controller.product;
 
 import com.shopme.admin.exeption.ProductNotFindException;
 import com.shopme.admin.files.FileUploadUtil;
+import com.shopme.admin.security.ShopmeUserDetails;
 import com.shopme.admin.service.brand.BrandService;
 import com.shopme.admin.service.category.CategoryService;
 import com.shopme.admin.service.product.ProductService;
@@ -14,6 +15,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.repository.query.Param;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
@@ -111,14 +113,21 @@ public class ProductController {
 
     @PostMapping("/products/save")
     public String saveProduct(Product product, RedirectAttributes ra,
-                              @RequestParam("fileImage") MultipartFile mainImageMultipart,
-                              @RequestParam("extraImage") MultipartFile[] extraImagesMultiparts,
+                              @RequestParam(value="fileImage",required = false) MultipartFile mainImageMultipart,
+                              @RequestParam(value="extraImage",required = false) MultipartFile[] extraImagesMultiparts,
                               @RequestParam(name = "detailIDs", required = false) String[] detailIDs,
                               @RequestParam(name = "detailNames", required = false) String[] detailNames,
                               @RequestParam(name = "detailValues", required = false) String[] detailValues,
                               @RequestParam(name = "imageIDs", required = false) String[] imageIDs,
-                              @RequestParam(name = "imageNames", required = false) String[] imageNames)
+                              @RequestParam(name = "imageNames", required = false) String[] imageNames,
+                              @AuthenticationPrincipal ShopmeUserDetails loggedUser)
             throws IOException {
+
+        if(loggedUser.hasRole("Salesperson")){
+            productService.saveProductPrice(product);
+            ra.addFlashAttribute("message", "The product has been saved successfully");
+            return "redirect:/products";
+        }
 
         setMainImageName(mainImageMultipart, product);
         setExistingExtraImageNames(imageIDs, imageNames, product);
