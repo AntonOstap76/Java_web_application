@@ -97,6 +97,15 @@ public class CategoryService {
 
 
     public Category save(Category category){
+        Category parent = category.getParent();
+
+        //whenever category will be created  or updated  the allParentIDs will be updated as well
+        if(parent != null){
+            String allParentIds = parent.getAllParentIDs() == null ? "-" : parent.getAllParentIDs();
+            allParentIds+=String.valueOf(parent.getId())+"-";
+            category.setAllParentIDs(allParentIds);
+        }
+
         return categoryRepository.save(category);
     }
 

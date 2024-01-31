@@ -4,7 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3db1cdab-0452-4dbe-bace-821339949de2" name="Changes" comment="" />
+    <list default="true" id="3db1cdab-0452-4dbe-bace-821339949de2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeCommon/src/main/java/com/shopme/common/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeCommon/src/main/java/com/shopme/common/entity/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/controller/product/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/controller/product/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/repository/product/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/repository/product/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/service/category/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/service/category/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/service/product/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/service/product/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/fragments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/products/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/products/products.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/1/photo_2024-01-25_22-35-22.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/10/cat.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/10/extras/ania.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/10/extras/photo_2023-06-12_21-03-57.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/10/extras/photo_2023-06-12_21-04-44.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/11/refurb-ipad-air-wifi-gold-2021.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/12/extras/photo_2024-01-25_20-08-42.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/12/photo_2024-01-25_20-08-42.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/2/extras/Isaac Henry.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/2/extras/Matthew.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/2/extras/photo_2024-01-25_20-00-26.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/2/photo_2024-01-25_20-00-38.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/9/1-89.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/9/extras/04042022.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/9/extras/ania.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/9/extras/cat.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/9/extras/forest.jpg" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,6 +47,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -33,6 +62,7 @@
     </option>
   </component>
   <component name="ProjectId" id="2UzHbHTUM2FJWLf9EDvtmrcvMTy" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -44,7 +74,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;20&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/anton/Downloads/ShopmeProject/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/products&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/anton/Downloads/ShopmeProject/ShopmeWebParent/ShopmeBackEnd&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
@@ -175,6 +205,17 @@
       <updated>1693935559310</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

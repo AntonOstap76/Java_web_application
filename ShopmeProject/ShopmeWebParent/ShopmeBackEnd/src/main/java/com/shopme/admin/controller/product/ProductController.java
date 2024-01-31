@@ -3,8 +3,10 @@ package com.shopme.admin.controller.product;
 import com.shopme.admin.exeption.ProductNotFindException;
 import com.shopme.admin.files.FileUploadUtil;
 import com.shopme.admin.service.brand.BrandService;
+import com.shopme.admin.service.category.CategoryService;
 import com.shopme.admin.service.product.ProductService;
 import com.shopme.common.entity.Brand;
+import com.shopme.common.entity.Category;
 import com.shopme.common.entity.Product;
 import com.shopme.common.entity.ProductImage;
 import org.slf4j.Logger;
@@ -39,10 +41,13 @@ public class ProductController {
     @Autowired
     private BrandService brandService;
 
+    @Autowired
+    private CategoryService categoryService; //inject a categoryService class
+
     @GetMapping("/products")
     public String listFirstPage(Model model) {
 
-        return listByPage(1, model,"name","asc",null);
+        return listByPage(1, model,"name","asc",null, 0 );
 //        List<Product> productList = productService.listAll();
 //        model.addAttribute("productList", productList);
 //
@@ -51,10 +56,14 @@ public class ProductController {
     @GetMapping("/products/page/{pageNum}")
     public String listByPage(@PathVariable(name="pageNum") Integer pageNum, Model model,
                              @Param("sortField") String sortField, @Param("sortDir") String sortDir,
-                             @Param("keyword") String keyword){
+                             @Param("keyword") String keyword,
+            /* add for filter purpose*/        @Param("categoryId")Integer categoryId){
 
-        Page<Product> page=productService.listByPage(pageNum,sortField,sortDir,keyword);
+        Page<Product> page=productService.listByPage(pageNum,sortField,sortDir,keyword, categoryId);
         List<Product> productList = page.getContent();
+
+        List<Category> listCategories = categoryService.listCategoriesUsedInForm(); // create list of categories with hierarchy
+
 
 
         long startCount = (pageNum-1)*productService.PRODUCTS_PER_PAGE+1;
@@ -64,6 +73,9 @@ public class ProductController {
         }
 
         String reverseSortDir = sortDir.equals("asc") ? "desc" : "asc";
+
+        //add categoryId for page and column links
+        if(categoryId !=null) model.addAttribute("categoryId", categoryId);
 
         model.addAttribute("totalPages", page.getTotalPages());
         model.addAttribute("currentPage", pageNum);
@@ -75,6 +87,8 @@ public class ProductController {
         model.addAttribute("sortDir", sortDir);
         model.addAttribute("reverseSortDir", reverseSortDir);
         model.addAttribute("keyword", keyword);
+        model.addAttribute("listCategories", listCategories);//add list of categories to models
+
         return "products/products";
     }
 

@@ -26,6 +26,10 @@ public class Category {
 
     private boolean enabled;
 
+    //to store the IDs of this category parent and parent of parent
+    @Column(name="all_parent_ids", length = 256, nullable = true)
+    private String allParentIDs;
+
     @ManyToOne
     @JoinColumn(name = "parent_id")
     private Category parent;
@@ -168,5 +172,14 @@ public class Category {
     @Override
     public String toString() {
         return this.name;
+    }
+
+    //generate getters and setters for  parents IDs
+    public String getAllParentIDs() {
+        return allParentIDs;
+    }
+
+    public void setAllParentIDs(String allParentIDs) {
+        this.allParentIDs = allParentIDs;
     }
 }
