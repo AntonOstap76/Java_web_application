@@ -63,13 +63,27 @@
         <table class="table table-bordered table-striped table-hover  table-responsive-xl">
             <thead class="thead-dark">
             <tr>
-                <th th:replace="fragments :: column_link('/products', 'id', 'ID', 'none')"/>
-                <th>Main Image</th>
-                <th th:replace="fragments :: column_link('/products', 'name', 'Product Name', 'none')"/>
-                <th th:replace="fragments :: column_link('/products', 'brand', 'Brand', 'none')"/>
-                <th th:replace="fragments :: column_link('/products', 'category', 'Category', 'none')"/>
+                <!--Make html page look better in different size of screen-->
+                <!--  Here -->
+                <th class="hideable-column">
+                <th th:replace="fragments :: column_link('/products', 'id', 'ID', 'tag')"/>
+                </th>
 
-<!--                Change authorization for enable status-->
+                <th>Main Image</th>
+
+                <th th:replace="fragments :: column_link('/products', 'name', 'Product Name', 'none')"/>
+
+                <!--  Here -->
+                <th class="hideable-column">
+                <th th:replace="fragments :: column_link('/products', 'brand', 'Brand', 'tag')"/>
+                </th>
+
+                <!--  Here -->
+                <th class="hideable-column">
+                <th th:replace="fragments :: column_link('/products', 'category', 'Category', 'tag')"/>
+                </th>
+
+                <!--Change authorization for enable status-->
                 <th:block sec:authorize="hasAnyAuthority('Admin', 'Editor')">
                 <th>Enabled</th>
                 </th:block>
@@ -79,7 +93,8 @@
             </thead>
             <tbody>
             <tr th:each="product:${productList}">
-                <td >[[${product.id}]]</td>
+                <!--  change look Here -->
+                <td class="hideable-column">[[${product.id}]]</td>
                 <td>
                     <img th:src="@{${product.mainImagePath}}" style="width:120px" class="img-fluid"/>
                 </td>
@@ -89,8 +104,9 @@
                        th:title="${product.name}">[[${product.shortName}]]</a>
 
                 </td>
-                <td>[[${product.brand.name}]]</td>
-                <td>[[${product.category.name}]]</td>
+                <!--  Change look Here -->
+                <td class="hideable-column">[[${product.brand.name}]]</td>
+                <td class="hideable-column">[[${product.category.name}]]</td>
 
                 <th:block sec:authorize="hasAnyAuthority('Admin', 'Editor')">
                 <td>
@@ -118,6 +134,34 @@
             </tr>
             </tbody>
         </table>
+    </div>
+    <!--Make a special div section for view in the small screens-->
+    <div class="less-details">
+        <div th:each="product : ${productList}" class="row m-1">
+            <div class="col-4">
+                <img th:src="@{${product.mainImagePath}}" style="width:80px" class="img-fluid"/>
+            </div>
+            <div class="col-8">
+                <div>
+                    <a class="link-detail" th:href="@{'/products/detail/'+${product.id}}">[[${product.shortName}]]</a>
+                </div>
+                <div class="mt-2">
+                    <a class="fas fa-file-alt fa-2x icon-green link-detail"
+                       th:href="@{'/products/detail/'+${product.id}}" ></a>
+
+                    <th:block sec:authorize="hasAnyAuthority('Admin', 'Editor', 'Salesperson')">
+                        &nbsp;
+                        <div th:replace="fragments :: edit('product', '/products/edit/' + ${product.id})"/>
+                    </th:block>
+
+                    <th:block sec:authorize="hasAnyAuthority('Admin', 'Editor')">
+                        &nbsp;
+                        <div th:replace="fragments :: delete('product', ${product.id}, '/products/delete/' + ${product.id}, true)"/>
+                    </th:block>
+
+                </div>
+            </div>
+            <div>&nbsp;</div>
     </div>
 
 
