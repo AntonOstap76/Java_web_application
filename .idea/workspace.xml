@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3db1cdab-0452-4dbe-bace-821339949de2" name="Changes" comment="Change possibilities for different roles in Product URLS. Make new fragments for readonly. Create method for saving product when Salesperson only change price, cost and discount percents.">
+    <list default="true" id="3db1cdab-0452-4dbe-bace-821339949de2" name="Changes" comment="Make view of product page change with change of screen size.">
+      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/controller/product/ProductSaveHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/products/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/products/products.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/controller/product/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/controller/product/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/navigation.html" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/navigation.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,9 +21,9 @@
       <list>
         <option value="CSS File" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -202,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706735679104</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Make view of product page change with change of screen size.">
+      <created>1706825330895</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1706825330895</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -219,7 +229,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add new data for brands and products. Update Category module for better searching. Update Filter function and add possibility to fiter products by categories and their sub categories." />
     <MESSAGE value="Change possibilities for different roles in Product URLS. Make new fragments for readonly. Create method for saving product when Salesperson only change price, cost and discount percents." />
-    <option name="LAST_COMMIT_MESSAGE" value="Change possibilities for different roles in Product URLS. Make new fragments for readonly. Create method for saving product when Salesperson only change price, cost and discount percents." />
+    <MESSAGE value="Make view of product page change with change of screen size." />
+    <option name="LAST_COMMIT_MESSAGE" value="Make view of product page change with change of screen size." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
