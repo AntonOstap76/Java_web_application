@@ -4,21 +4,651 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3db1cdab-0452-4dbe-bace-821339949de2" name="Changes" comment="Refactirong the code(Fix the issue with login form, add dropdown list for navigation menu and make the code in Product controller more readable by Making new class ProductSaveHelper">
-      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/java/com/shopme/security/WebSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/resources/static/images/ShopmeLogo2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/resources/static/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/resources/templates/error.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/resources/templates/error/403.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/resources/templates/error/404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/resources/templates/error/500.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/resources/templates/fragments.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/resources/templates/navigation.html" afterDir="false" />
+    <list default="true" id="3db1cdab-0452-4dbe-bace-821339949de2" name="Changes" comment="Start of endUser page. Create Home page with navigation menu and foter menu and add some pages for errors, some fragments and add Security Configuration">
+      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/java/com/shopme/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/java/com/shopme/config/MvcConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/java/com/shopme/repository/CategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/java/com/shopme/repository/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/java/com/shopme/service/CategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/java/com/shopme/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/resources/templates/products_by_category.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/test/java/com/shopme/tests/CategoryRepositoryTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/java/com/shopme/site/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/java/com/shopme/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/java/com/shopme/site/ShopmeFrontEndApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/java/com/shopme/ShopmeFrontEndApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeCommon/src/main/java/com/shopme/common/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeCommon/src/main/java/com/shopme/common/entity/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/java/com/shopme/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/java/com/shopme/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/java/com/shopme/ShopmeFrontEndApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/java/com/shopme/ShopmeFrontEndApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/resources/templates/fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/resources/templates/fragments.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/ShopmeBackEnd/Shopme-backend-2023-10-06.0.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/ShopmeBackEnd/Shopme-backend.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/ShopmeBackEnd/src/test/java/com.shopme.admin.test/PasswordEncoderTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/ShopmeBackEnd/src/test/java/com.shopme.admin.test/RoleRepositoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/ShopmeBackEnd/src/test/java/com.shopme.admin.test/UserRepositoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/ShopmeBackEnd/user-photos/1/photo_2023-06-12_21-04-33.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/ShopmeBackEnd/user-photos/10/Frederick Santos.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/ShopmeBackEnd/user-photos/11/Anna Maria.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/ShopmeBackEnd/user-photos/12/Satya Narayana.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/ShopmeBackEnd/user-photos/13/Matthew.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/ShopmeBackEnd/user-photos/14/Alfred.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/ShopmeBackEnd/user-photos/14/Dave Kumar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/ShopmeBackEnd/user-photos/15/Jack Bruce.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/ShopmeBackEnd/user-photos/16/Mohamed Zirri.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/ShopmeBackEnd/user-photos/17/Mithun Kumar Majumdar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/ShopmeBackEnd/user-photos/18/Ali Raza.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/ShopmeBackEnd/user-photos/19/Isaac Henry.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/ShopmeBackEnd/user-photos/2/Allada Pavan.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/ShopmeBackEnd/user-photos/20/Svetlana Stasovska.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/ShopmeBackEnd/user-photos/21/Mike Gates.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/ShopmeBackEnd/user-photos/22/Pedro Quintero.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/ShopmeBackEnd/user-photos/23/Amina Elshal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/ShopmeBackEnd/user-photos/24/photo_2023-06-12_21-03-04.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/ShopmeBackEnd/user-photos/25/cat.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/ShopmeBackEnd/user-photos/26/photo_2023-09-28_13-08-35.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/ShopmeBackEnd/user-photos/27/ja.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/ShopmeBackEnd/user-photos/28/ania.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/ShopmeBackEnd/user-photos/29/04042022.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/ShopmeBackEnd/user-photos/3/Bruce Kitchell.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/ShopmeBackEnd/user-photos/4/Muhammad Evran.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/ShopmeBackEnd/user-photos/5/KentHervey.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/ShopmeBackEnd/user-photos/6/Alfred.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/ShopmeBackEnd/user-photos/7/Frederick Santos.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/ShopmeBackEnd/user-photos/7/Nathi_Sangweni.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/ShopmeBackEnd/user-photos/8/Ammanolla.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/ShopmeBackEnd/user-photos/9/Bill Feeny.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/ShopmeBackEnd/user-photos/9/Isaac Henry.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/1/Acer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/1/Canon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/10/Samsung.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/11/Olympus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/12/Caden.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/13/amazonbasics.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/14/Nikon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/15/Neewer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/16/Sigma.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/17/Bosch.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/17/Lenovo_Corporate_Logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/18/01-nvidia-logo-vert-500x200-2c50-l@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/18/Joby.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/19/GoPro.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/19/_1511456315_653_apple-mobile.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/2/Fujifilm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/20/Manfrotto.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/20/d5099fbca1f14ba14c1891af52837730.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/21/Google.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/21/Logo_1_do.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/22/LG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/22/large_LGE_Logo_3D_Basic_W_.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/23/Motorola.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/23/cat.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/24/Pantech.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/24/google-logo-icon-illustration-free-vector.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/25/Huawei.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/25/kwyUDPNptGShKsQ7tNMhcn.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/26/Intel-Logo-Transparent-PNG-Vector.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/26/Xiaomi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/27/Hovamp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/27/sony-brand-logo-phone-symbol-white-design-vector-46231880.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/28/Aioneus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/28/asus_logo_3d_model_c4d_max_obj_fbx_ma_lwo_3ds_3dm_stl_1715884_o.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/29/XIAE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/3/Sony.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/30/Everyworth.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/31/Lexar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/32/Nulaxy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/33/Fitfort.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/34/PopSocket.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/35/SHAWE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/36/Lenovo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/37/Acer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/38/Dell.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/39/Intel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/4/HP.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/40/ASUS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/41/Microsoft.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/42/DragonTouch.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/43/AMD.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/44/XFX.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/45/MSI.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/46/Seagate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/47/Corsair.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/48/Thermaltake.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/49/Kingston.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/5/SanDisk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/50/Creative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/51/Crucial.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/52/HyperX.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/53/Gigabyte.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/54/TP-Link.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/6/Western Digital.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/7/Panasonic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/8/Pelican.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/9/Apple.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/brands-logos/9/Canon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/1/electronics.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/10/digital cameras.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/11/flashes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/12/lenses.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/13/tripods_monopods.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/14/carrier cellphones.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/15/unlocked cellphones.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/16/cellphone accessories.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/17/cables and adapters.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/18/microsd cards.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/19/cellphone_stands.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/2/camera.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/20/cellphone cases.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/21/headphones.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/22/computer processors.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/23/graphic cards.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/24/internal hard drive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/25/internal optical drives.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/26/power supplies.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/27/solid state drives.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/28/sound cards.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/29/computer memory.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/3/computers.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/30/motherboards.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/31/network cards.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/32/cat.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/33/books.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/34/images.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/4/cellphones.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/5/desktop computers.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/6/laptop computers.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/7/tablets.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/8/computer components.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/9/bags_cases.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/categories-images/1/electronics.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/categories-images/10/digital cameras.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/categories-images/11/flashes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/categories-images/12/lenses.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/categories-images/13/tripods_monopods.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/categories-images/14/carrier cellphones.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/categories-images/15/unlocked cellphones.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/categories-images/16/cellphone accessories.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/categories-images/17/cables and adapters.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/categories-images/18/microsd cards.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/categories-images/19/cellphone_stands.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/categories-images/2/camera.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/categories-images/20/cellphone cases.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/categories-images/21/headphones.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/categories-images/22/computer processors.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/categories-images/23/graphic cards.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/categories-images/24/internal hard drive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/categories-images/25/internal optical drives.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/categories-images/26/power supplies.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/categories-images/27/solid state drives.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/categories-images/28/sound cards.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/categories-images/29/computer memory.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/categories-images/3/computers.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/categories-images/30/motherboards.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/categories-images/31/network cards.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/categories-images/4/cellphones.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/categories-images/5/desktop computers.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/categories-images/6/laptop computers.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/categories-images/7/tablets.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/categories-images/8/computer components.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/category-images/categories-images/9/bags_cases.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/1/canon eos m50.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/1/extras/EOS M50 LCD.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/1/extras/EOS M50 flash opened.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/1/extras/EOS M50 incline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/1/extras/EOS M50 straight.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/1/extras/EOS M50 top down.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/10/Olympus Tough main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/10/extras/Olympus Tough potrait.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/10/extras/Olympus Tough water around.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/10/extras/Olympus Tough water slow motion.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/100/Crucial 8GB DDR main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/100/extras/Crucial 8GB DDR 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/100/extras/Crucial 8GB DDR installation.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/100/extras/Crucial 8GB DDR on laptop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/101/HyperX 16GB main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/101/extras/HyperX 16GB DDR4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/101/extras/HyperX 16GB couple.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/101/extras/HyperX 16GB package.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/102/Asus AM4 TUF main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/102/extras/Asus AM4 TUF 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/102/extras/Asus AM4 TUF box.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/102/extras/Asus AM4 TUF circuit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/102/extras/Asus AM4 TUF ports.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/103/Asus Prime main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/103/extras/Asus Prime connectivity.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/103/extras/Asus Prime details.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/103/extras/Asus Prime outclass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/103/extras/Asus Prime outshine competition.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/104/Gigabyte B450M main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/104/extras/Gigabyte B450M circuit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/104/extras/Gigabyte B450M details.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/104/extras/Gigabyte B450M ports.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/105/TPLink AX3000 main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/105/extras/TPLink AX3000 Wifi 6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/105/extras/TPLink AX3000 reduce lag.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/105/extras/TPLink AX3000 speed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/106/TPLink AC1200 main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/106/extras/TPLink AC1200 antennas.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/106/extras/TPLink AC1200 bluetooth.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/106/extras/TPLink AC1200 details.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/107/batch-files-automate-670x335.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/11/Sony a7 III main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/12/CADeN Camera Backpack open.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/12/extras/CADeN Camera Backpack Waterproof.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/12/extras/CADeN Camera Backpack details.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/12/extras/CADeN Camera Backpack sizes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/12/extras/CADeN Camera Backpack usages.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/14/AmazonBasics Large DSLR Camera Bag.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/14/extras/AmazonBasics Large DSLR Camera Bag close view.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/14/extras/AmazonBasics Large DSLR Camera Bag cover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/14/extras/AmazonBasics Large DSLR Camera Bag opened.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/14/extras/AmazonBasics Large DSLR Camera Bag top view.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/14/extras/AmazonBasics Large DSLR Camera Bag tripod.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/15/Nikon Flash 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/15/extras/Nikon Flash details.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/16/Canon Speedlite main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/16/extras/Canon Speedlite 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/16/extras/Canon Speedlite 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/16/extras/Canon Speedlite 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/17/Sony Flash 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/17/extras/Sony Flash 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/17/extras/Sony Flash 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/17/extras/Sony Flash 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/18/Neewer TT560 Flash Speedlite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/18/extras/Neewer TT560 Flash Speedlite 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/18/extras/Neewer TT560 Flash Speedlite 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/18/extras/Neewer TT560 Flash Speedlite 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/19/Canon EF 50mm main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/19/extras/Canon EF 50mm side 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/19/extras/Canon EF 50mm side 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/19/extras/Canon EF 50mm side 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/19/extras/Canon EF 50mm side.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/2/Sony ZV-1 main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/2/extras/Sony ZV-1 bottom.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/2/extras/Sony ZV-1 front 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/2/extras/Sony ZV-1 front.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/2/extras/Sony ZV-1 side.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/20/Nikon AF-S Nikkor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/21/Canon EF 75-300mm 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/21/extras/Canon EF 75-300mm 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/22/Sigma 150-600mm main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/22/extras/Sigma 150-600mm 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/22/extras/Sigma 150-600mm 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/22/extras/Sigma 150-600mm 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/22/extras/Sigma 150-600mm buttons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/22/extras/Sigma 150-600mm front.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/23/Bosch BT150 main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/23/extras/Bosch BT150 install 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/23/extras/Bosch BT150 install 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/23/extras/Bosch BT150 install.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/23/extras/Bosch BT150 usage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/24/Joby JB01507 main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/24/extras/Joby JB01507 collapsed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/24/extras/Joby JB01507 usage 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/24/extras/Joby JB01507 usage 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/24/extras/Joby JB01507 usage 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/24/extras/Joby JB01507 usage 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/25/GoPro Tripod main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/25/extras/GoPro Tripod with camera 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/25/extras/GoPro Tripod with camera.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/25/extras/GoPro monopod mode.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/25/extras/GoPro monopod selfie.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/25/extras/GoPro tripod picture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/26/Manfrotto Monopod main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/27/Samsung Galaxy S7 front.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/27/extras/Samsung Galaxy S7 back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/27/extras/Samsung Galaxy S7 incline 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/27/extras/Samsung Galaxy S7 incline 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/28/Samsung Galaxy S6 Edge front.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/28/extras/Samsung Galaxy S6 Edge back 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/28/extras/Samsung Galaxy S6 Edge back 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/28/extras/Samsung Galaxy S6 Edge incline 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/28/extras/Samsung Galaxy S6 Edge incline 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/28/extras/Samsung Galaxy S6 Edge incline 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/28/extras/Samsung Galaxy S6 Edge incline 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/29/Google Pixel 3a - front.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/29/extras/Google Pixel 3a - back and front.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/29/extras/Google Pixel 3a - back side.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/3/Lumix FZ80 main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/3/extras/Lumix FZ80 buttons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/3/extras/Lumix FZ80 dimensions.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/3/extras/Lumix FZ80 lens.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/3/extras/Lumix FZ80 rear.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/30/LG G Flex front.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/30/extras/LG G Flex front and back curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/30/extras/LG G Flex incline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/30/extras/LG G Flex lying.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/30/extras/LG G Flex sim tray open.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/31/LG Optimus Exceed 2 main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/31/extras/LG Optimus Exceed 2 back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/31/extras/LG Optimus Exceed 2 incline 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/31/extras/LG Optimus Exceed 2 incline 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/32/LG G6 T-Mobile main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/32/extras/LG G6 T-Mobile back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/32/extras/LG G6 T-Mobile lying.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/32/extras/LG G6 T-Mobile side 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/33/TracFone Motorola Moto G6 main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/33/extras/TracFone Motorola Moto G6 back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/33/extras/TracFone Motorola Moto G6 side.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/34/Pantech Pocket main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/34/extras/Pantech Pocket 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/34/extras/Pantech Pocket 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/34/extras/Pantech Pocket 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/35/Samsung Galaxy S10 main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/35/extras/Samsung Galaxy S10 back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/35/extras/Samsung Galaxy S10 front and back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/35/extras/Samsung Galaxy S10 side 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/35/extras/Samsung Galaxy S10 side 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/36/Samsung Galaxy A20s main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/36/extras/Samsung Galaxy A20s back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/36/extras/Samsung Galaxy A20s cameras.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/36/extras/Samsung Galaxy A20s side1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/36/extras/Samsung Galaxy A20s side2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/37/Samsung Galaxy S20 main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/37/extras/Samsung Galaxy S20 front and back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/37/extras/Samsung Galaxy S20 incline1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/37/extras/Samsung Galaxy S20 incline2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/37/extras/Samsung Galaxy S20 side1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/37/extras/Samsung Galaxy S20 side2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/38/iPhone XS 256GB 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/39/extras/iPhone 7 Plus 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/39/extras/iPhone 7 Plus back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/39/extras/iPhone 7 Plus front.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/39/iPhone 7 Plus main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/4/Pelican 1200 Case main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/4/extras/Pelican 1200 Case features.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/4/extras/Pelican 1200 Case open.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/4/extras/Pelican 1200 Case usages.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/40/extras/iPhone X 64GB rear.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/40/iPhone X 64GB main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/41/Google Pixel 4 main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/41/extras/Google Pixel 4 back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/41/extras/Google Pixel 4 incline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/41/extras/Google Pixel 4 side.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/42/Motor G Power main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/42/extras/Motor G Power cameras.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/42/extras/Motor G Power twos.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/42/extras/Motor G Power unlocked.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/43/Huawai P30 Lite main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/43/extras/Huawai P30 Lite cameras.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/43/extras/Huawai P30 Lite rear.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/43/extras/Huawai P30 Lite specs.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/43/extras/Huawai P30 Lite twos.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/44/Redmi Note 9S main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/44/extras/Redmi Note 9S cameras.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/45/HOVAMP iPhone Charger 5pack main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/45/extras/HOVAMP iPhone Charger Aluminum.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/45/extras/HOVAMP iPhone Charger compatible.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/45/extras/HOVAMP iPhone Charger internal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/46/Aioneus iphone charger cord main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/46/extras/Aioneus iphone charger cord demo charging.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/46/extras/Aioneus iphone charger cord easy to carry.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/46/extras/Aioneus iphone charger cord internal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/46/extras/Aioneus iphone charger cord supported devices.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/47/XIAE USB C Cable main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/47/extras/XIAE USB C Cable connectors.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/47/extras/XIAE USB C Cable features.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/47/extras/XIAE USB C Cable internals.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/47/extras/XIAE USB C Cable suitability.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/47/extras/XIAE USB C Cable supported devices.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/48/Everyworth Micro USB Cable 3pack.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/48/extras/Everyworth Micro USB Cable Attention.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/48/extras/Everyworth Micro USB Cable Durability.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/48/extras/Everyworth Micro USB Cable perfect design.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/48/extras/Everyworth Micro USB Cable supported devices.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/49/Samsung EVO Select 256GB microSD main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/49/extras/Samsung EVO Select 256GB microSD 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/49/extras/Samsung EVO Select 256GB microSD 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/49/extras/Samsung EVO Select 256GB microSD 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/49/extras/Samsung EVO Select 256GB microSD 5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/49/extras/Samsung EVO Select 256GB microSD 6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/49/extras/Samsung EVO Select 256GB microSD 7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/5/Pelican 1040 Micro Case 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/5/extras/Pelican 1040 Micro Case 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/50/SanDisk 128GB main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/50/extras/SanDisk 128GB 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/50/extras/SanDisk 128GB 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/50/extras/SanDisk 128GB 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/51/SanDisk Ultra 32GB main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/51/extras/SanDisk Ultra 32GB 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/51/extras/SanDisk Ultra 32GB 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/51/extras/SanDisk Ultra 32GB 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/51/extras/SanDisk Ultra 32GB 5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/52/Samsung PRO 128GB main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/52/extras/Samsung PRO 128GB 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/52/extras/Samsung PRO 128GB 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/52/extras/Samsung PRO 128GB 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/53/Lexar 512GB main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/53/extras/Lexar 512GB 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/53/extras/Lexar 512GB2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/54/Manfrotto Tripod main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/54/extras/Manfrotto Tripod 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/54/extras/Manfrotto Tripod 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/54/extras/Manfrotto Tripod collapse.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/54/extras/Manfrotto Tripod hand.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/55/Nulaxy A4 main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/55/extras/Nulaxy A4 2 case.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/55/extras/Nulaxy A4 2 portable.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/55/extras/Nulaxy A4 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/55/extras/Nulaxy A4 holds ipad.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/56/Fitfort Phone Ring Holder main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/56/extras/Fitfort Phone Ring Holder car mount.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/56/extras/Fitfort Phone Ring Holder rotation.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/56/extras/Fitfort Phone Ring Holder structure.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/56/extras/Fitfort Phone Ring Holder usages.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/57/PopWallet main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/57/extras/PopWallet 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/57/extras/PopWallet 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/57/extras/PopWallet holds phone.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/58/Shawe Phone holder main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/58/extras/Shawe Phone holder 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/58/extras/Shawe Phone holder 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/58/extras/Shawe Phone holder 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/59/Lenovo IdeaCenter main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/59/extras/Lenovo IdeaCenter back 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/59/extras/Lenovo IdeaCenter back 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/59/extras/Lenovo IdeaCenter back 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/59/extras/Lenovo IdeaCenter back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/59/extras/Lenovo IdeaCenter incline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/59/extras/Lenovo IdeaCenter incline2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/6/Verizon Apple iPhone 6S main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/6/extras/Verizon Apple iPhone 6S all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/6/extras/Verizon Apple iPhone 6S back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/6/extras/Verizon Apple iPhone 6S front.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/60/Aspire TC-885-UA92 main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/60/extras/Aspire TC-885-UA92 CPU and RAM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/60/extras/Aspire TC-885-UA92 audio.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/60/extras/Aspire TC-885-UA92 compact form.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/60/extras/Aspire TC-885-UA92 connect.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/60/extras/Aspire TC-885-UA92 connectivity.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/61/Dell Inspiron 27 AIO main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/61/extras/Dell Inspiron 27 AIO 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/61/extras/Dell Inspiron 27 AIO back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/61/extras/Dell Inspiron 27 AIO side.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/62/IdeaCentre 3 main 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/62/extras/IdeaCentre 3 back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/62/extras/IdeaCentre 3 front.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/62/extras/IdeaCentre 3 incline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/62/extras/IdeaCentre 3 main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/62/extras/IdeaCentre 3 with screen mouse keyboard.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/62/extras/IdeaCentre 3 with screen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/63/Dell OptiPlex main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/63/extras/Dell OptiPlex details.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/63/extras/Dell OptiPlex interfaces 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/63/extras/Dell OptiPlex interfaces.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/63/extras/Dell OptiPlex on desktop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/63/extras/Dell OptiPlex with screen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/64/Intel NUC main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/64/extras/Intel NUC interface.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/64/extras/intel NUC usage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/64/extras/intel core i7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/65/Lenovo Flex 5 main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/65/extras/Lenovo Flex 5 fold 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/65/extras/Lenovo Flex 5 fold 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/65/extras/Lenovo Flex 5 fold.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/65/extras/Lenovo Flex 5 laptop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/65/extras/Lenovo Flex 5 top.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/66/Acer Aspire 5 Slim Laptop main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/66/extras/Acer Aspire 5 Slim Laptop family.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/66/extras/Acer Aspire 5 Slim Laptop full hd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/66/extras/Acer Aspire 5 Slim Laptop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/67/ASUS VivoBook main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/67/extras/ASUS VivoBook battery.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/67/extras/ASUS VivoBook cinematic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/67/extras/ASUS VivoBook ergonomic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/67/extras/ASUS VivoBook flexibility.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/67/extras/ASUS VivoBook hinge.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/67/extras/ASUS VivoBook mobility.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/68/HP Chromebook main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/68/extras/HP Chromebook components.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/68/extras/HP Chromebook dimensions.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/68/extras/HP Chromebook usb audio.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/69/Acer Swift 3 main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/69/extras/Acer Swift 3 features.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/69/extras/Acer Swift 3 full HD.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/69/extras/Acer Swift 3 performance.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/69/extras/Acer Swift 3 stay on the move.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/69/extras/Acer Swift 3 ultra light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/7/Samsung Galaxy Note 2 main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/7/extras/Samsung Galaxy Note 2 incline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/7/extras/Samsung Galaxy Note 2 with stylus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/70/ASUS TUF Gaming main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/70/extras/ASUS TUF Gaming 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/70/extras/ASUS TUF Gaming back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/70/extras/ASUS TUF Gaming side.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/70/extras/ASUS TUF Gaming top view.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/71/Lenovo Legion main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/71/extras/Lenovo Legion Audio.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/71/extras/Lenovo Legion Light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/71/extras/Lenovo Legion fast refresh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/71/extras/Lenovo Legion keys.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/71/extras/Lenovo Legion minimal mighty.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/72/Acer Chromebook Spin main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/72/extras/Acer Chromebook Spin 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/72/extras/Acer Chromebook Spin 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/72/extras/Acer Chromebook Spin 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/72/extras/Acer Chromebook Spin 5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/72/extras/Acer Chromebook Spin 6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/73/Dell Inspiron 3000 main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/73/extras/Dell Inspiron 3000 back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/73/extras/Dell Inspiron 3000 incline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/73/extras/Dell Inspiron 3000 sideview.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/73/extras/Dell Inspiron 3000 top view.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/74/Galaxy Tab A main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/74/extras/Galaxy Tab A back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/74/extras/Galaxy Tab A front and back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/74/extras/Galaxy Tab A potrait.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/74/extras/Galaxy Tab A side.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/75/Galaxy Tab S6 Lite main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/75/extras/Galaxy Tab S6 Lite back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/75/extras/Galaxy Tab S6 Lite incline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/75/extras/Galaxy Tab S6 Lite landscape.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/75/extras/Galaxy Tab S6 Lite pen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/76/Surface Pro 7 main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/76/extras/Surface Pro 7 back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/76/extras/Surface Pro 7 key.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/76/extras/Surface Pro 7 side.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/76/extras/Surface Pro 7 stand.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/76/extras/Surface Pro 7 straight.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/77/Lenovo Tab M10 Plus main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/77/extras/Lenovo Tab M10 Plus back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/77/extras/Lenovo Tab M10 Plus camera.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/77/extras/Lenovo Tab M10 Plus front.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/77/extras/Lenovo Tab M10 Plus music.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/77/extras/Lenovo Tab M10 Plus side.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/78/Lenovo Tab M8 main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/78/extras/Lenovo Tab M8 back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/78/extras/Lenovo Tab M8 camera.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/78/extras/Lenovo Tab M8 front.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/78/extras/Lenovo Tab M8 gaming.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/78/extras/Lenovo Tab M8 side.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/79/extras/iPad 6 all sides.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/79/iPad 6 main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/8/Samsung 500GB SSD main 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/8/extras/Samsung 500GB SSD 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/8/extras/Samsung 500GB SSD bottom.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/8/extras/Samsung 500GB SSD main 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/8/extras/Samsung 500GB SSD speed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/8/extras/Samsung 500GB SSD waranty.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/80/Dragon Touch Notepad K10 Tablet main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/80/extras/Dragon Touch Notepad K10 Tablet camera.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/80/extras/Dragon Touch Notepad K10 Tablet features.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/80/extras/Dragon Touch Notepad K10 Tablet performance.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/81/AMD Ryzen 5 Box.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/81/extras/AMD Ryzen 5 Box 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/81/extras/AMD Ryzen 5 Box 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/81/extras/AMD Ryzen 5 chip.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/82/Intel Core i5 main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/82/extras/Intel Core i5 desktop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/82/extras/Intel Core i5 graphics required.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/82/extras/Intel Core i5 specs.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/83/Intel Core i9 main box.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/83/extras/Intel Core i9 box chip close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/83/extras/Intel Core i9 box with chip.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/83/extras/Intel Core i9 chip.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/84/XFX Radeon RX 580 main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/84/extras/XFX Radeon RX 580 bottom.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/84/extras/XFX Radeon RX 580 ports.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/84/extras/XFX Radeon RX 580 stand.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/85/MSI GeForce main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/85/extras/MSI GeForce bottom.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/85/extras/MSI GeForce card.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/86/Western Digital 1TB 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/86/extras/Western Digital 1TB 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/86/extras/Western Digital 1TB 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/86/extras/Western Digital 1TB 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/86/extras/Western Digital 1TB 5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/87/Western Digital 4TB main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/87/extras/Western Digital 4TB external.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/87/extras/Western Digital 4TB internal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/88/Seagate BarraCuda 2TB main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/88/extras/Seagate BarraCuda 2TB 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/88/extras/Seagate BarraCuda 2TB go big.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/89/Asus 24x DVD-RW main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/89/extras/Asus 24x DVD-RW back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/9/Powershot ELPH 180 main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/9/extras/Powershot ELPH 180 back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/9/extras/Powershot ELPH 180 bottom.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/9/extras/Powershot ELPH 180 front.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/9/extras/Powershot ELPH 180 landscape.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/9/extras/Powershot ELPH 180 lense closed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/9/extras/Powershot ELPH 180 top.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/90/LG WH16NS40 main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/90/extras/LG WH16NS40 disc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/90/extras/LG WH16NS40 front.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/91/LG Bluray main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/92/Asus Rog Thor 1200 main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/92/extras/Asus Rog Thor 1200 connectivity.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/92/extras/Asus Rog Thor 1200 cooling.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/92/extras/Asus Rog Thor 1200 customization.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/93/Corsair SF600 main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/93/extras/Corsair SF600 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/93/extras/Corsair SF600 back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/93/extras/Corsair SF600 cables.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/93/extras/Corsair SF600 fan.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/94/Thermaltake 500W main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/94/extras/Thermaltake 500W 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/94/extras/Thermaltake 500W connector.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/94/extras/Thermaltake 500W fan.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/95/Western Digital 500GB SSD main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/95/extras/Western Digital 500GB SSD 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/95/extras/Western Digital 500GB SSD 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/95/extras/Western Digital 500GB SSD 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/96/Kingston 240GB SSD main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/96/extras/Kingston 240GB SSD 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/96/extras/Kingston 240GB SSD bottom.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/96/extras/Kingston 240GB SSD package.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/97/Xonar main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/97/extras/Xonar bottom.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/97/extras/Xonar ciruct.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/97/extras/Xonar ports.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/98/Sound Blaster main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/98/extras/Sound Blaster 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/98/extras/Sound Blaster ports.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/99/Corsair 16GB main.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/99/extras/Corsair 8 GB.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/99/extras/Corsair DDR.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/99/extras/Corsair slot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeWebParent/product-images/99/extras/Corsair specs.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,11 +658,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="JavaScript File" />
-        <option value="Class" />
         <option value="HTML File" />
         <option value="CSS File" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -86,15 +716,16 @@
       <recent name="C:\Users\anton\Downloads\ShopmeProject\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\main\resources\templates\users" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.shopme.config" />
       <recent name="com.shopme.site" />
       <recent name="com.shopme.admin.test2" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.com.shopme.ShopmeFrontEndApplication">
+  <component name="RunManager" selected="Application.ShopmeFrontEndApplication">
     <configuration name="ShopmeBackEndApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.shopme.admin.ShopmeBackEndApplication" />
       <module name="ShopmeBAckEnd" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ShopmeWebParent/ShopmeBackEnd" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.shopme.admin.*" />
@@ -106,21 +737,9 @@
       </method>
     </configuration>
     <configuration name="ShopmeFrontEndApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.shopme.site.ShopmeFrontEndApplication" />
-      <module name="ShopmeFrontEnd" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.shopme.site.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="com.shopme.ShopmeFrontEndApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.shopme.ShopmeFrontEndApplication" />
       <module name="ShopmeFrontEnd" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.shopme.*" />
@@ -131,51 +750,66 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductRepositoryTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ShopmeBAckEnd" />
+    <configuration name="CategoryRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ShopmeFrontEnd" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.shopme.admin.test.product.*" />
+          <option name="PATTERN" value="category.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.shopme.admin.test.product" />
-      <option name="MAIN_CLASS_NAME" value="com.shopme.admin.test.product.ProductRepositoryTests" />
+      <option name="PACKAGE_NAME" value="category" />
+      <option name="MAIN_CLASS_NAME" value="category.CategoryRepositoryTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductRepositoryTests.testSaveProductWithDetails" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ShopmeBAckEnd" />
+    <configuration name="CategoryRepositoryTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ShopmeFrontEnd" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.shopme.admin.test.product.*" />
+          <option name="PATTERN" value="com.shopme.tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.shopme.admin.test.product" />
-      <option name="MAIN_CLASS_NAME" value="com.shopme.admin.test.product.ProductRepositoryTests" />
-      <option name="METHOD_NAME" value="testSaveProductWithDetails" />
+      <option name="PACKAGE_NAME" value="com.shopme.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.shopme.tests.CategoryRepositoryTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CategoryRepositoryTests.testFindCategoryByAlias" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ShopmeFrontEnd" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shopme.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.shopme.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.shopme.tests.CategoryRepositoryTests" />
+      <option name="METHOD_NAME" value="testFindCategoryByAlias" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.ShopmeFrontEndApplication" />
-      <item itemvalue="Application.com.shopme.ShopmeFrontEndApplication" />
       <item itemvalue="Application.ShopmeBackEndApplication" />
-      <item itemvalue="JUnit.ProductRepositoryTests" />
-      <item itemvalue="JUnit.ProductRepositoryTests.testSaveProductWithDetails" />
+      <item itemvalue="Application.ShopmeFrontEndApplication" />
+      <item itemvalue="JUnit.CategoryRepositoryTests.testFindCategoryByAlias" />
+      <item itemvalue="JUnit.CategoryRepositoryTest" />
+      <item itemvalue="JUnit.CategoryRepositoryTests" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.com.shopme.ShopmeFrontEndApplication" />
         <item itemvalue="Application.ShopmeFrontEndApplication" />
         <item itemvalue="Application.ShopmeBackEndApplication" />
-        <item itemvalue="JUnit.ProductRepositoryTests.testSaveProductWithDetails" />
-        <item itemvalue="JUnit.ProductRepositoryTests" />
+        <item itemvalue="JUnit.CategoryRepositoryTests.testFindCategoryByAlias" />
+        <item itemvalue="JUnit.CategoryRepositoryTests" />
+        <item itemvalue="JUnit.CategoryRepositoryTest" />
       </list>
     </recent_temporary>
   </component>
@@ -223,7 +857,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706994215662</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Start of endUser page. Create Home page with navigation menu and foter menu and add some pages for errors, some fragments and add Security Configuration">
+      <created>1707146143152</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1707146143152</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -242,7 +883,8 @@
     <MESSAGE value="Change possibilities for different roles in Product URLS. Make new fragments for readonly. Create method for saving product when Salesperson only change price, cost and discount percents." />
     <MESSAGE value="Make view of product page change with change of screen size." />
     <MESSAGE value="Refactirong the code(Fix the issue with login form, add dropdown list for navigation menu and make the code in Product controller more readable by Making new class ProductSaveHelper" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactirong the code(Fix the issue with login form, add dropdown list for navigation menu and make the code in Product controller more readable by Making new class ProductSaveHelper" />
+    <MESSAGE value="Start of endUser page. Create Home page with navigation menu and foter menu and add some pages for errors, some fragments and add Security Configuration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Start of endUser page. Create Home page with navigation menu and foter menu and add some pages for errors, some fragments and add Security Configuration" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

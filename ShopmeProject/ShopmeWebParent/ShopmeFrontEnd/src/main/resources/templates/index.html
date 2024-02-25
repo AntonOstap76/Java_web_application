@@ -7,7 +7,19 @@
 <div th:replace="navigation :: header_menu"/>
 <div class="container-fluid">
     <div>
-            <h1>Welcome to Shopme eCommerce</h1>
+            <h1>Shopping by Categories</h1>
+    </div>
+
+<!--    Show category list from mainController-->
+    <div class="row">
+        <div class="col" th:each="category:${categoryList}">
+            <div>
+                <img th:src="@{${category.imagePath}}" style="width:100px" class="img-fluid"/>
+            </div>
+            <div>
+                <a th:href="@{'/c/'+${category.alias}}">[[${category.name}]]</a>
+            </div>
+        </div>
     </div>
 
 </div>
