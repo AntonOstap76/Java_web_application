@@ -1,9 +1,9 @@
 package com.shopme.admin.service.category;
 
-import com.shopme.admin.exeption.CategoryNotFindExeption;
 import com.shopme.admin.files.CategoryPageInfo;
 import com.shopme.admin.repository.category.CategoryRepository;
 import com.shopme.common.entity.Category;
+import com.shopme.common.exception.CategoryNotFindExeption;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

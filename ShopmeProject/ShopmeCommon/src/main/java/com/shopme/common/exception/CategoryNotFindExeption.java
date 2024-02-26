@@ -1,6 +1,4 @@
-package com.shopme.admin.exeption;
-
-import com.shopme.common.entity.Category;
+package com.shopme.common.exception;
 
 public class CategoryNotFindExeption extends Exception {
     public CategoryNotFindExeption(String message) {
