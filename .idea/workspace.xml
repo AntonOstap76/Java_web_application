@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3db1cdab-0452-4dbe-bace-821339949de2" name="Changes" comment="Add a thumbnails for product details page. Add carousel for photos of product.">
-      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/resources/templates/product/product_fragment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/resources/templates/product/search_result.html" afterDir="false" />
+    <list default="true" id="3db1cdab-0452-4dbe-bace-821339949de2" name="Changes" comment="Create a search function">
+      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeCommon/src/main/java/com/shopme/common/entity/Setting.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeCommon/src/main/java/com/shopme/common/entity/SettingCategory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/repository/setting/SettingRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/test/java/com/shopme/admin/test/setting/SettingRepositoryTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/java/com/shopme/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/java/com/shopme/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/java/com/shopme/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/java/com/shopme/repository/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/java/com/shopme/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/java/com/shopme/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/resources/templates/navigation.html" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/resources/templates/navigation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/resources/templates/product/products_by_category.html" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/resources/templates/product/products_by_category.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,9 +21,10 @@
       <list>
         <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="HTML File" />
+        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -52,19 +49,19 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "jdk.selected.JAVA_MODULE": "20",
-    "last_opened_file_path": "C:/Users/anton/Downloads/ShopmeProject/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/resources/templates/product",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;20&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/anton/Downloads/ShopmeProject/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/resources/templates/product&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.shopme.admin.exeption" />
@@ -89,7 +86,7 @@
       <recent name="com.shopme.admin.test2" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ShopmeFrontEndApplication">
+  <component name="RunManager" selected="JUnit.SettingRepositoryTests.testCreateCurrencySettings">
     <configuration name="ShopmeBackEndApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.shopme.admin.ShopmeBackEndApplication" />
       <module name="ShopmeBAckEnd" />
@@ -118,48 +115,48 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CategoryRepositoryTests.testFindCategoryByAlias" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ShopmeFrontEnd" />
+    <configuration name="SettingRepositoryTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ShopmeBAckEnd" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.shopme.tests.*" />
+          <option name="PATTERN" value="com.shopme.admin.test.setting.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.shopme.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.shopme.tests.CategoryRepositoryTests" />
-      <option name="METHOD_NAME" value="testFindCategoryByAlias" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProductRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ShopmeFrontEnd" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.shopme.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.shopme.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.shopme.tests.ProductRepositoryTest" />
+      <option name="PACKAGE_NAME" value="com.shopme.admin.test.setting" />
+      <option name="MAIN_CLASS_NAME" value="com.shopme.admin.test.setting.SettingRepositoryTests" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductRepositoryTest.testFindByAlias" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ShopmeFrontEnd" />
+    <configuration name="SettingRepositoryTests.testCreateCurrencySettings" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ShopmeBAckEnd" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.shopme.tests.*" />
+          <option name="PATTERN" value="com.shopme.admin.test.setting.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.shopme.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.shopme.tests.ProductRepositoryTest" />
-      <option name="METHOD_NAME" value="testFindByAlias" />
+      <option name="PACKAGE_NAME" value="com.shopme.admin.test.setting" />
+      <option name="MAIN_CLASS_NAME" value="com.shopme.admin.test.setting.SettingRepositoryTests" />
+      <option name="METHOD_NAME" value="testCreateCurrencySettings" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SettingRepositoryTests.testCreateGeneralSettings" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ShopmeBAckEnd" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shopme.admin.test.setting.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.shopme.admin.test.setting" />
+      <option name="MAIN_CLASS_NAME" value="com.shopme.admin.test.setting.SettingRepositoryTests" />
+      <option name="METHOD_NAME" value="testCreateGeneralSettings" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -168,17 +165,17 @@
     <list>
       <item itemvalue="Application.ShopmeBackEndApplication" />
       <item itemvalue="Application.ShopmeFrontEndApplication" />
-      <item itemvalue="JUnit.ProductRepositoryTest" />
-      <item itemvalue="JUnit.ProductRepositoryTest.testFindByAlias" />
-      <item itemvalue="JUnit.CategoryRepositoryTests.testFindCategoryByAlias" />
+      <item itemvalue="JUnit.SettingRepositoryTests.testCreateCurrencySettings" />
+      <item itemvalue="JUnit.SettingRepositoryTests" />
+      <item itemvalue="JUnit.SettingRepositoryTests.testCreateGeneralSettings" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SettingRepositoryTests.testCreateCurrencySettings" />
+        <item itemvalue="JUnit.SettingRepositoryTests.testCreateGeneralSettings" />
+        <item itemvalue="JUnit.SettingRepositoryTests" />
         <item itemvalue="Application.ShopmeFrontEndApplication" />
         <item itemvalue="Application.ShopmeBackEndApplication" />
-        <item itemvalue="JUnit.ProductRepositoryTest" />
-        <item itemvalue="JUnit.ProductRepositoryTest.testFindByAlias" />
-        <item itemvalue="JUnit.CategoryRepositoryTests.testFindCategoryByAlias" />
       </list>
     </recent_temporary>
   </component>
@@ -254,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1708966355377</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Create a search function">
+      <created>1709139954440</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1709139954440</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -277,7 +281,8 @@
     <MESSAGE value="Change the path of the photos. Implement a listing of categories in frond-end. Coded a listing of product of specific category and make searching more comfortable for search products by path  of categories and also show a discount price of products." />
     <MESSAGE value="Code a product details page" />
     <MESSAGE value="Add a thumbnails for product details page. Add carousel for photos of product." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add a thumbnails for product details page. Add carousel for photos of product." />
+    <MESSAGE value="Create a search function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create a search function" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
