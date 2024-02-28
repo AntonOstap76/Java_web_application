@@ -4,10 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3db1cdab-0452-4dbe-bace-821339949de2" name="Changes" comment="Code a product details page">
-      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/resources/templates/product/images_carousel.html" afterDir="false" />
+    <list default="true" id="3db1cdab-0452-4dbe-bace-821339949de2" name="Changes" comment="Add a thumbnails for product details page. Add carousel for photos of product.">
+      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/resources/templates/product/product_fragment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/resources/templates/product/search_result.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/resources/templates/product/product_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/resources/templates/product/product_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/java/com/shopme/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/java/com/shopme/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/java/com/shopme/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/java/com/shopme/repository/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/java/com/shopme/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/java/com/shopme/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/resources/templates/navigation.html" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/resources/templates/navigation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/resources/templates/product/products_by_category.html" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/resources/templates/product/products_by_category.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,30 +52,30 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;20&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/anton/Downloads/ShopmeProject/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/resources/templates&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "jdk.selected.JAVA_MODULE": "20",
+    "last_opened_file_path": "C:/Users/anton/Downloads/ShopmeProject/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/resources/templates/product",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.shopme.admin.exeption" />
       <recent name="com.shopme.admin.export" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\anton\Downloads\ShopmeProject\ShopmeProject\ShopmeWebParent\ShopmeFrontEnd\src\main\resources\templates\product" />
       <recent name="C:\Users\anton\Downloads\ShopmeProject\ShopmeProject\ShopmeWebParent\ShopmeFrontEnd\src\main\resources\templates" />
       <recent name="C:\Users\anton\Downloads\ShopmeProject\ShopmeProject\ShopmeWebParent\ShopmeFrontEnd\src\main\resources\static" />
       <recent name="C:\Users\anton\Downloads\ShopmeProject\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\main\resources\templates\products" />
       <recent name="C:\Users\anton\Downloads\ShopmeProject\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\main\resources\static\js" />
-      <recent name="C:\Users\anton\Downloads\ShopmeProject\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\main\resources\static\richtext" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\anton\Downloads\ShopmeProject\ShopmeProject\ShopmeWebParent\ShopmeFrontEnd\src\main\resources\templates\product" />
@@ -241,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1708959077725</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Add a thumbnails for product details page. Add carousel for photos of product.">
+      <created>1708966355377</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1708966355377</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -263,7 +276,8 @@
     <MESSAGE value="Start of endUser page. Create Home page with navigation menu and foter menu and add some pages for errors, some fragments and add Security Configuration" />
     <MESSAGE value="Change the path of the photos. Implement a listing of categories in frond-end. Coded a listing of product of specific category and make searching more comfortable for search products by path  of categories and also show a discount price of products." />
     <MESSAGE value="Code a product details page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Code a product details page" />
+    <MESSAGE value="Add a thumbnails for product details page. Add carousel for photos of product." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add a thumbnails for product details page. Add carousel for photos of product." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -5,14 +5,20 @@
 <body>
 
 <div th:replace="navigation :: header_menu"/>
-<div class="container-fluid">
+
+<!--fragment for searching-->
+<div th:replace="navigation :: search_nav"></div>
+
+    <div class="container-fluid">
+
+
     <div>
             <h1>Shopping by Categories</h1>
     </div>
 
 <!--    Show category list from mainController-->
     <div class="row">
-        <div class="col" th:each="category:${categoryList}">
+        <div class="col-sm-2" th:each="category:${categoryList}">
             <div>
                 <img th:src="@{${category.imagePath}}" style="width:100px" class="img-fluid"/>
             </div>
