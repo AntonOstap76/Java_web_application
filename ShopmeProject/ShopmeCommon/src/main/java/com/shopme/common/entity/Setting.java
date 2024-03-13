@@ -2,6 +2,8 @@ package com.shopme.common.entity;
 
 import jakarta.persistence.*;
 
+import java.util.Objects;
+
 //create an entity class for settings
 @Entity
 @Table(name="settings")
@@ -31,6 +33,10 @@ public class Setting {
     public Setting() {
     }
 
+    public Setting(String key) {
+        this.key = key;
+    }
+
     public String getKey() {
         return key;
     }
@@ -55,4 +61,24 @@ public class Setting {
         this.category = settingCategory;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Setting setting = (Setting) o;
+        return key.equals(setting.key);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(key);
+    }
+
+    @Override
+    public String toString() {
+        return "Setting{" +
+                "key='" + key + '\'' +
+                ", value='" + value + '\'' +
+                '}';
+    }
 }

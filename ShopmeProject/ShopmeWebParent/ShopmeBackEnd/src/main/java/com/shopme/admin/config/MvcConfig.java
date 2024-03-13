@@ -44,6 +44,7 @@ public class MvcConfig implements WebMvcConfigurer {
 //                .addResourceLocations("file:/"+brandLogosPath+"/");
 
         exposeDirectory("../product-images", registry);
+        exposeDirectory("../site-logo", registry);
 
     }
 
