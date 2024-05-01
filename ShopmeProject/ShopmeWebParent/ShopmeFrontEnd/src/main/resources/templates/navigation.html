@@ -10,7 +10,7 @@
 
             <a class="navbar-brand" th:href="@{/}">
 
-                <img class="logo" th:src="@{/images/ShopmeLogo2.png}"/>
+                <img class="logo" th:src="@{${SITE_LOGO}}"/>
 
             </a>
 
@@ -111,7 +111,7 @@
     </div>
         <div th:fragment="footer" class="text-center m-3">
 
-            <p>Shopme  - Copyright &copy; Shopme Ltd.</p>
+            <p>[[${COPYRIGHT}]]</p>
 
         </div>
 

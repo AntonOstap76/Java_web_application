@@ -4,21 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3db1cdab-0452-4dbe-bace-821339949de2" name="Changes" comment="Create settings entity. Also created some tests to insert basics settings.">
-      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeCommon/src/main/java/com/shopme/common/entity/Currency.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeCommon/src/main/java/com/shopme/common/entity/SettingBag.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/controller/setting/GeneralSettingBag.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/controller/setting/SettingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/repository/setting/CurrencyRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/service/settings/SettingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/settings/general.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/settings/settings.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/test/java/com/shopme/admin/test/setting/CurrencyRepositoryTest.java" afterDir="false" />
+    <list default="true" id="3db1cdab-0452-4dbe-bace-821339949de2" name="Changes" comment="Code currency entity, repository and unit tests. Code manage general settings">
+      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/java/com/shopme/SettingFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/java/com/shopme/repository/SettingRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/java/com/shopme/service/SettingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/test/java/com/shopme/tests/SettingRepositoryTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeCommon/src/main/java/com/shopme/common/entity/Setting.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeCommon/src/main/java/com/shopme/common/entity/Setting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/config/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/config/MvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/repository/setting/SettingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/repository/setting/SettingRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/products/product_overview.html" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/products/product_overview.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/settings/general.html" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/settings/general.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/test/java/com/shopme/admin/test/setting/SettingRepositoryTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/test/java/com/shopme/admin/test/setting/SettingRepositoryTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/java/com/shopme/config/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/java/com/shopme/config/MvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/resources/templates/fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/resources/templates/fragments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/resources/templates/navigation.html" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/resources/templates/navigation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/resources/templates/product/product_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/resources/templates/product/product_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/resources/templates/product/product_fragment.html" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd/src/main/resources/templates/product/product_fragment.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,19 +57,19 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "jdk.selected.JAVA_MODULE": "20",
-    "last_opened_file_path": "C:/Users/anton/Downloads/ShopmeProject/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/resources/templates/settings",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;20&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/anton/Downloads/ShopmeProject/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.shopme.admin.exeption" />
@@ -84,21 +83,23 @@
       <recent name="C:\Users\anton\Downloads\ShopmeProject\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\main\resources\templates\products" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\anton\Downloads\ShopmeProject\ShopmeProject\ShopmeWebParent" />
       <recent name="C:\Users\anton\Downloads\ShopmeProject\ShopmeProject\ShopmeWebParent\ShopmeFrontEnd\src\main\resources\templates\product" />
       <recent name="C:\Users\anton\Downloads\ShopmeProject\ShopmeProject\ShopmeWebParent\ShopmeBackEnd\src\main\resources\templates\users" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.shopme.service" />
+      <recent name="com.shopme.repository" />
       <recent name="com.shopme.common.exception" />
       <recent name="com.shopme" />
       <recent name="com.shopme.config" />
-      <recent name="com.shopme.site" />
-      <recent name="com.shopme.admin.test2" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ShopmeBackEndApplication">
+  <component name="RunManager" selected="Application.ShopmeFrontEndApplication">
     <configuration name="ShopmeBackEndApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.shopme.admin.ShopmeBackEndApplication" />
       <module name="ShopmeBAckEnd" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.shopme.admin.*" />
@@ -109,34 +110,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CurrencyRepositoryTest.testCreateCurrencies" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ShopmeBAckEnd" />
+    <configuration name="ShopmeFrontEndApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.shopme.ShopmeFrontEndApplication" />
+      <module name="ShopmeFrontEnd" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.shopme.admin.test.setting.*" />
+          <option name="PATTERN" value="com.shopme.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.shopme.admin.test.setting" />
-      <option name="MAIN_CLASS_NAME" value="com.shopme.admin.test.setting.CurrencyRepositoryTest" />
-      <option name="METHOD_NAME" value="testCreateCurrencies" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CurrencyRepositoryTest.testListAllOrderByNameAsc" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ShopmeBAckEnd" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.shopme.admin.test.setting.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.shopme.admin.test.setting" />
-      <option name="MAIN_CLASS_NAME" value="com.shopme.admin.test.setting.CurrencyRepositoryTest" />
-      <option name="METHOD_NAME" value="testListAllOrderByNameAsc" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -157,7 +140,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SettingRepositoryTests.testListSettingsByCategory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SettingRepositoryTests.testCreateGeneralSettings" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ShopmeBAckEnd" />
       <extension name="coverage">
         <pattern>
@@ -167,7 +150,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.shopme.admin.test.setting" />
       <option name="MAIN_CLASS_NAME" value="com.shopme.admin.test.setting.SettingRepositoryTests" />
-      <option name="METHOD_NAME" value="testListSettingsByCategory" />
+      <option name="METHOD_NAME" value="testCreateGeneralSettings" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SettingRepositoryTests.testFindByTwoCategories" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ShopmeFrontEnd" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shopme.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.shopme.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.shopme.tests.SettingRepositoryTests" />
+      <option name="METHOD_NAME" value="testFindByTwoCategories" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -175,18 +174,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.ShopmeBackEndApplication" />
-      <item itemvalue="JUnit.CurrencyRepositoryTest.testListAllOrderByNameAsc" />
-      <item itemvalue="JUnit.SettingRepositoryTests.testListSettingsByCategory" />
-      <item itemvalue="JUnit.CurrencyRepositoryTest.testCreateCurrencies" />
+      <item itemvalue="Application.ShopmeFrontEndApplication" />
       <item itemvalue="JUnit.SettingRepositoryTests.testCreateCurrencySettings" />
+      <item itemvalue="JUnit.SettingRepositoryTests.testCreateGeneralSettings" />
+      <item itemvalue="JUnit.SettingRepositoryTests.testFindByTwoCategories" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ShopmeFrontEndApplication" />
         <item itemvalue="Application.ShopmeBackEndApplication" />
-        <item itemvalue="JUnit.SettingRepositoryTests.testListSettingsByCategory" />
-        <item itemvalue="JUnit.CurrencyRepositoryTest.testCreateCurrencies" />
-        <item itemvalue="JUnit.CurrencyRepositoryTest.testListAllOrderByNameAsc" />
+        <item itemvalue="JUnit.SettingRepositoryTests.testFindByTwoCategories" />
         <item itemvalue="JUnit.SettingRepositoryTests.testCreateCurrencySettings" />
+        <item itemvalue="JUnit.SettingRepositoryTests.testCreateGeneralSettings" />
       </list>
     </recent_temporary>
   </component>
@@ -276,7 +275,14 @@
       <option name="project" value="LOCAL" />
       <updated>1709161060251</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Code currency entity, repository and unit tests. Code manage general settings">
+      <created>1710359727714</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1710359727714</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -301,7 +307,8 @@
     <MESSAGE value="Add a thumbnails for product details page. Add carousel for photos of product." />
     <MESSAGE value="Create a search function" />
     <MESSAGE value="Create settings entity. Also created some tests to insert basics settings." />
-    <option name="LAST_COMMIT_MESSAGE" value="Create settings entity. Also created some tests to insert basics settings." />
+    <MESSAGE value="Code currency entity, repository and unit tests. Code manage general settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="Code currency entity, repository and unit tests. Code manage general settings" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
