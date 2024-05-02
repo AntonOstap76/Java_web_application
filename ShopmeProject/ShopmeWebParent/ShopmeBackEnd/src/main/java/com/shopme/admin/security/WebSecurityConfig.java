@@ -60,7 +60,7 @@ public class WebSecurityConfig {
                 .requestMatchers("/categories/**").hasAnyAuthority("Admin", "Editor")
                 .requestMatchers("/brands/**").hasAnyAuthority("Admin", "Editor")
 
-                //change authorisation of every products URLS
+                //change authorisation of every product URLS
                 .requestMatchers("/products/new", "/products/delete/**")
                             .hasAnyAuthority("Admin", "Editor")
 

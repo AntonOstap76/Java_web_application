@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3db1cdab-0452-4dbe-bace-821339949de2" name="Changes" comment="Fix some bugs. Create a filter that change some features in the frontend when I changed it in the backend.">
-      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeCommon/src/main/java/com/shopme/common/entity/Country.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeCommon/src/main/java/com/shopme/common/entity/State.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/repository/setting/country/CountryRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/repository/setting/state/StateRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/test/java/com/shopme/admin/test/setting/country/CountryRepositoryTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/test/java/com/shopme/admin/test/setting/state/StateRepositoryTests.java" afterDir="false" />
+    <list default="true" id="3db1cdab-0452-4dbe-bace-821339949de2" name="Changes" comment="Create Country and State entity. Create repositories for them. Write unit tests for them.">
+      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/controller/setting/CountryRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/test/java/com/shopme/admin/test/setting/country/CountryRestControllerTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeCommon/src/main/java/com/shopme/common/entity/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeCommon/src/main/java/com/shopme/common/entity/Country.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/main/java/com/shopme/admin/security/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/test/java/com/shopme/admin/test/setting/country/CountryRepositoryTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/test/java/com/shopme/admin/test/setting/country/CountryRepositoryTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,19 +51,19 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;20&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/anton/Downloads/ShopmeProject/ShopmeProject/ShopmeWebParent/ShopmeFrontEnd&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "jdk.selected.JAVA_MODULE": "20",
+    "last_opened_file_path": "C:/Users/anton/Downloads/ShopmeProject/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/test",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.shopme.admin.exeption" />
@@ -89,101 +89,120 @@
       <recent name="com.shopme.config" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.StateRepositoryTests.testDeleteState">
-    <configuration name="StateRepositoryTests.testCreateState" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.CountryRestControllerTests.testDeleteCountry">
+    <configuration name="CountryRepositoryTests" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="ShopmeBAckEnd" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.shopme.admin.test.setting.state.*" />
+          <option name="PATTERN" value="com.shopme.admin.test.setting.country.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.shopme.admin.test.setting.state" />
-      <option name="MAIN_CLASS_NAME" value="com.shopme.admin.test.setting.state.StateRepositoryTests" />
-      <option name="METHOD_NAME" value="testCreateState" />
+      <option name="PACKAGE_NAME" value="com.shopme.admin.test.setting.country" />
+      <option name="MAIN_CLASS_NAME" value="com.shopme.admin.test.setting.country.CountryRepositoryTests" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CountryRepositoryTests.testDeleteCountry" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ShopmeBAckEnd" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shopme.admin.test.setting.country.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.shopme.admin.test.setting.country" />
+      <option name="MAIN_CLASS_NAME" value="com.shopme.admin.test.setting.country.CountryRepositoryTests" />
+      <option name="METHOD_NAME" value="testDeleteCountry" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StateRepositoryTests.testDeleteState" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CountryRepositoryTests.testUpdateCountry" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ShopmeBAckEnd" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.shopme.admin.test.setting.state.*" />
+          <option name="PATTERN" value="com.shopme.admin.test.setting.country.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.shopme.admin.test.setting.state" />
-      <option name="MAIN_CLASS_NAME" value="com.shopme.admin.test.setting.state.StateRepositoryTests" />
-      <option name="METHOD_NAME" value="testDeleteState" />
+      <option name="PACKAGE_NAME" value="com.shopme.admin.test.setting.country" />
+      <option name="MAIN_CLASS_NAME" value="com.shopme.admin.test.setting.country.CountryRepositoryTests" />
+      <option name="METHOD_NAME" value="testUpdateCountry" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StateRepositoryTests.testGetState" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CountryRestControllerTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ShopmeBAckEnd" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.shopme.admin.test.setting.state.*" />
+          <option name="PATTERN" value="com.shopme.admin.test.setting.country.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.shopme.admin.test.setting.state" />
-      <option name="MAIN_CLASS_NAME" value="com.shopme.admin.test.setting.state.StateRepositoryTests" />
-      <option name="METHOD_NAME" value="testGetState" />
+      <option name="PACKAGE_NAME" value="com.shopme.admin.test.setting.country" />
+      <option name="MAIN_CLASS_NAME" value="com.shopme.admin.test.setting.country.CountryRestControllerTests" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/src/test" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CountryRestControllerTests.testDeleteCountry" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ShopmeBAckEnd" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shopme.admin.test.setting.country.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.shopme.admin.test.setting.country" />
+      <option name="MAIN_CLASS_NAME" value="com.shopme.admin.test.setting.country.CountryRestControllerTests" />
+      <option name="METHOD_NAME" value="testDeleteCountry" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StateRepositoryTests.testListStatesByCountry" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CountryRestControllerTests.testUpdateCountry" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ShopmeBAckEnd" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.shopme.admin.test.setting.state.*" />
+          <option name="PATTERN" value="com.shopme.admin.test.setting.country.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.shopme.admin.test.setting.state" />
-      <option name="MAIN_CLASS_NAME" value="com.shopme.admin.test.setting.state.StateRepositoryTests" />
-      <option name="METHOD_NAME" value="testListStatesByCountry" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="StateRepositoryTests.testUpdateStates" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ShopmeBAckEnd" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.shopme.admin.test.setting.state.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.shopme.admin.test.setting.state" />
-      <option name="MAIN_CLASS_NAME" value="com.shopme.admin.test.setting.state.StateRepositoryTests" />
-      <option name="METHOD_NAME" value="testUpdateStates" />
+      <option name="PACKAGE_NAME" value="com.shopme.admin.test.setting.country" />
+      <option name="MAIN_CLASS_NAME" value="com.shopme.admin.test.setting.country.CountryRestControllerTests" />
+      <option name="METHOD_NAME" value="testUpdateCountry" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.StateRepositoryTests.testCreateState" />
-      <item itemvalue="JUnit.StateRepositoryTests.testDeleteState" />
-      <item itemvalue="JUnit.StateRepositoryTests.testGetState" />
-      <item itemvalue="JUnit.StateRepositoryTests.testListStatesByCountry" />
-      <item itemvalue="JUnit.StateRepositoryTests.testUpdateStates" />
+      <item itemvalue="JUnit.CountryRepositoryTests" />
+      <item itemvalue="JUnit.CountryRepositoryTests.testDeleteCountry" />
+      <item itemvalue="JUnit.CountryRepositoryTests.testUpdateCountry" />
+      <item itemvalue="JUnit.CountryRestControllerTests.testDeleteCountry" />
+      <item itemvalue="JUnit.CountryRestControllerTests.testUpdateCountry" />
+      <item itemvalue="JUnit.CountryRestControllerTests" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.StateRepositoryTests.testDeleteState" />
-        <item itemvalue="JUnit.StateRepositoryTests.testCreateState" />
-        <item itemvalue="JUnit.StateRepositoryTests.testGetState" />
-        <item itemvalue="JUnit.StateRepositoryTests.testUpdateStates" />
-        <item itemvalue="JUnit.StateRepositoryTests.testListStatesByCountry" />
+        <item itemvalue="JUnit.CountryRestControllerTests.testDeleteCountry" />
+        <item itemvalue="JUnit.CountryRestControllerTests.testUpdateCountry" />
+        <item itemvalue="JUnit.CountryRestControllerTests" />
+        <item itemvalue="JUnit.CountryRepositoryTests.testDeleteCountry" />
+        <item itemvalue="JUnit.CountryRepositoryTests.testUpdateCountry" />
       </list>
     </recent_temporary>
   </component>
@@ -287,7 +306,14 @@
       <option name="project" value="LOCAL" />
       <updated>1714571274389</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Create Country and State entity. Create repositories for them. Write unit tests for them.">
+      <created>1714576091524</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1714576091524</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -314,7 +340,8 @@
     <MESSAGE value="Create settings entity. Also created some tests to insert basics settings." />
     <MESSAGE value="Code currency entity, repository and unit tests. Code manage general settings" />
     <MESSAGE value="Fix some bugs. Create a filter that change some features in the frontend when I changed it in the backend." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix some bugs. Create a filter that change some features in the frontend when I changed it in the backend." />
+    <MESSAGE value="Create Country and State entity. Create repositories for them. Write unit tests for them." />
+    <option name="LAST_COMMIT_MESSAGE" value="Create Country and State entity. Create repositories for them. Write unit tests for them." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -23,7 +23,7 @@ public class CountryRepositoryTests {
 
     @Test
     public void testCreateCountry(){
-        Country country = countryRepository.save(new Country("Poland", "PL"));
+        Country country = countryRepository.save(new Country("Mexico", "MX"));
         assertThat(country).isNotNull();
         assertThat(country.getId()).isGreaterThan(0);
     }
@@ -38,8 +38,8 @@ public class CountryRepositoryTests {
 
     @Test
     public void testUpdateCountry(){
-        Integer id = 2;
-        String code="PL";
+        Integer id = 3;
+        String code="USA";
 
         Country country = countryRepository.findById(id).get();
         country.setCode(code);
@@ -53,14 +53,14 @@ public class CountryRepositoryTests {
 
     @Test
     public void testGetCountry(){
-        Integer id=2;
+        Integer id=3;
         Country country = countryRepository.findById(id).get();
         assertThat(country).isNotNull();
     }
 
     @Test
     public void testDeleteCountry(){
-        Integer id =2;
+        Integer id =7;
         countryRepository.deleteById(id);
 
         Optional<Country> country = countryRepository.findById(id);
