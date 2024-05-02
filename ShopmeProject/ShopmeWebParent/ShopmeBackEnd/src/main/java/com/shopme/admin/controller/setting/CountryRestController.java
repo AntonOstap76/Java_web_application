@@ -19,7 +19,7 @@ public class CountryRestController {
     }
 
     @PostMapping("/countries/save")
-                        //requestbody converting json code to java code
+                        //requestBody converting json code to java code
     public String save(@RequestBody Country country){
         Country savedCountry = countryRepository.save(country);
         return String.valueOf(savedCountry.getId());
